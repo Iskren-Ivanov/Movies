@@ -1,0 +1,10 @@
+* {
+  font-size: 1em;
+  font-family: Arial;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

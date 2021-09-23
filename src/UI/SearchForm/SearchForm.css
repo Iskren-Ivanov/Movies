@@ -1,0 +1,23 @@
+.search-form-container {
+    width: 35vw !important;
+}
+
+.search-form-container__input {
+    border-radius: 5px !important;
+}
+
+.search-form-container__button {
+    margin-left: 0.5rem;
+    border-radius: 0.3rem !important;
+    border: 0.1rem solid rgb(19, 153, 19) !important;
+    color: rgb(19, 153, 19) !important;
+    background-color: rgb(233, 233, 241)!important;
+}
+
+.whiteBtn {
+    background-color: white!important;
+}
+
+.search-form-container__button:focus {
+    box-shadow: none !important;
+}
