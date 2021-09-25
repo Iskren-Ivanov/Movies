@@ -30,11 +30,15 @@ const Movie = ({ location }) => {
 
   const addedRatingInLocalStore = (value) => {
     let ratingsArr = JSON.parse(localStorage.getItem('ratings'));
+
     if (!ratingsArr) {
       ratingsArr = [{ id, rating: value }];
     } else {
-      const currentMovieObj = ratingsArr.find((obj, index) => obj.id === id);
-      currentMovieObj.rating = value;
+      let currentMovieObj = ratingsArr.find((obj) => obj.id === id);
+      currentMovieObj
+        ? (currentMovieObj.rating = value)
+        : (currentMovieObj = { id: id, rating: value });
+      ratingsArr.push(currentMovieObj);
     }
     localStorage.setItem('ratings', JSON.stringify(ratingsArr));
   };
